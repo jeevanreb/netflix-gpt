@@ -78,5 +78,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  # netflix gpt 
  - congig tailwind
  - header 
- - login Form
+ - login Form - validation regex
  - signup form
+ - routing
+ - form validation
+ -use ref hook
