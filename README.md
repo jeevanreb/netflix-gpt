@@ -72,6 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
  git remote add origin https://github.com/jeevanreb/netflix-gpt.git
  git branch -M main
+ git add.
+ git commit -m "add feature"
  git push -u origin main
 
 
@@ -83,3 +85,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  - routing
  - form validation
  -use ref hook
+ - firebase setup
+ -deploying appp to production
+ -create sign up user in firebase
