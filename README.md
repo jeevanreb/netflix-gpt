@@ -90,3 +90,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  -create sign up user in firebase
  - implement sign in
  - created redux store with userslice
+- signout route
