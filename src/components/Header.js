@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
+import { Logo } from "../utils/constant";
 const Header = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Header = () => {
         });
     }
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 const { uid, email, displayName, photoURL } = user;
                 dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
@@ -30,6 +31,9 @@ const Header = () => {
                 navigate("/");
             }
         });
+
+        //unsubscribe when component unmounts
+        return () => unsubscribe();
     }, [])
     return (
 
@@ -38,7 +42,7 @@ const Header = () => {
         >
             <img
                 className="w-36" alt="netlix"
-                src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"></img>
+                src={Logo}></img>
 
             {user && (
                 <div className="flex">

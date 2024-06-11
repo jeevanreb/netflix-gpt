@@ -91,3 +91,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  - implement sign in
  - created redux store with userslice
 - signout route
+- unsubscribed to the onauth state callback (unmount)
