@@ -92,3 +92,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  - created redux store with userslice
 - signout route
 - unsubscribed to the onauth state callback (unmount)
+- register tmdb api and register an app and getaccess token 
+- get data dfrom tmdb now playing movies list
