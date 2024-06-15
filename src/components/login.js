@@ -47,7 +47,6 @@ const dispatch = useDispatch();
                         // ...
                         setErrorMessage(error.message)
                     });
-                    console.log(user)
                     // ...
                 })
                 .catch((error) => {
@@ -61,7 +60,6 @@ const dispatch = useDispatch();
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user)
                     // ...
                 })
                 .catch((error) => {
